@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ascent — Keep climbing. Never stop.</title>
+<meta name="description" content="One bounce per platform, then it falls. Tap left or right and keep climbing. A vertical neon arcade climber for Android.">
+<link rel="icon" href="icon.png">
+
+<!-- Open Graph — 카톡·디스코드 등에 링크를 붙였을 때 보이는 미리보기 -->
+<meta property="og:title" content="Ascent — Keep climbing. Never stop.">
+<meta property="og:description" content="One bounce per platform, then it falls. 170 stages across three worlds.">
+<meta property="og:image" content="https://anizianizi1004.github.io/icon.png">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#08080f; --panel:#10101d; --line:#232338;
+    --ink:#e9ecf5; --dim:#8b90a6;
+    --cyan:#4de8f4; --violet:#a78bfa; --amber:#f6b45a;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Chakra Petch",system-ui,-apple-system,"Segoe UI",sans-serif;
+    line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+
+  /* ── 히어로 ── */
+  header{
+    text-align:center;padding:88px 0 64px;
+    /* 게임 배경처럼 위에서 아래로 옅게 번지는 빛 */
+    background:radial-gradient(120% 90% at 50% -10%, rgba(77,232,244,.14), transparent 60%);
+  }
+  header img.icon{width:104px;height:104px;border-radius:24px;box-shadow:0 12px 40px rgba(0,0,0,.55)}
+  h1{
+    font-size:clamp(52px,11vw,88px);font-weight:700;letter-spacing:.14em;
+    margin:24px 0 6px;text-shadow:0 0 28px rgba(77,232,244,.45);
+  }
+  .tagline{color:var(--dim);font-size:18px;letter-spacing:.06em;margin:0 0 12px}
+  .hook{font-size:20px;margin:0 auto 34px;max-width:30em}
+  .hook b{color:var(--cyan);font-weight:600}
+
+  .cta{
+    display:inline-block;padding:15px 40px;border-radius:10px;
+    background:var(--cyan);color:#04141a;font-weight:700;font-size:18px;
+    letter-spacing:.05em;text-decoration:none;transition:transform .12s, box-shadow .12s;
+    box-shadow:0 6px 26px rgba(77,232,244,.3);
+  }
+  .cta:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(77,232,244,.45)}
+  .free{color:var(--dim);font-size:14px;margin-top:14px}
+
+  /* ── 스크린샷 ── */
+  .shots{
+    display:flex;gap:16px;overflow-x:auto;padding:8px 24px 28px;
+    scroll-snap-type:x mandatory;
+  }
+  .shots img{
+    width:216px;flex:0 0 auto;border-radius:14px;border:1px solid var(--line);
+    scroll-snap-align:center;background:#000;
+  }
+
+  /* ── 본문 ── */
+  section{padding:56px 0;border-top:1px solid var(--line)}
+  h2{font-size:13px;letter-spacing:.22em;color:var(--dim);font-weight:600;margin:0 0 22px}
+  .rule{font-size:22px;max-width:34em;margin:0 0 18px}
+  .rule .accent{color:var(--violet)}
+  p.body{color:#c4c9db;max-width:38em;margin:0 0 14px}
+
+  ul.feat{list-style:none;padding:0;margin:0;display:grid;gap:12px;
+          grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  ul.feat li{
+    background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:16px 18px;color:#c4c9db;font-size:15px;
+  }
+  ul.feat b{color:var(--ink);display:block;margin-bottom:3px;font-weight:600}
+
+  footer{
+    border-top:1px solid var(--line);padding:36px 0 60px;
+    color:var(--dim);font-size:14px;text-align:center;
+  }
+  footer a{color:var(--dim)}
+  footer a:hover{color:var(--cyan)}
+  .sep{opacity:.4;margin:0 10px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img class="icon" src="icon.png" alt="Ascent">
+    <h1>Ascent</h1>
+    <p class="tagline">Keep climbing. Never stop.</p>
+    <p class="hook">One bounce per platform. <b>Then it falls.</b><br>How high can you climb?</p>
+    <a class="cta" href="https://play.google.com/store/apps/details?id=com.hisbo.ascent">Get it on Google Play</a>
+    <p class="free">Free · No sign-up · No in-app purchases</p>
+  </div>
+</header>
+
+<div class="shots">
+  <img src="shots/01_home.png" alt="Home screen">
+  <img src="shots/02_arcade.png" alt="Arcade world">
+  <img src="shots/03_sky.png" alt="Sky world">
+  <img src="shots/04_space.png" alt="Space world">
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>THE RULE</h2>
+    <p class="rule">Every platform holds you <span class="accent">exactly once</span>. The moment you leave it, it cracks and drops into the dark below.</p>
+    <p class="body">You are a ball that never stops bouncing. You only choose which way it leans — tap the left half of the screen to drift left, the right half to drift right, let go to stop. That is the whole game. No buttons, no joystick, nothing to memorize.</p>
+    <p class="body">There is no going back and no resting, and a rising darkness follows you up. Fall too far beneath your best height and it takes you.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>WHAT'S IN IT</h2>
+    <ul class="feat">
+      <li><b>170 stages, three worlds</b>A broken arcade machine, a dusk-lit sky above a sleeping city, and the star fields beyond the planet.</li>
+      <li><b>Never the same climb twice</b>Stages are built from pieces that reshuffle on every attempt. You cannot memorize your way up.</li>
+      <li><b>ASCENT — the endless mode</b>Clear stage 120 and the ceiling comes off. Sign in to Google Play Games for the leaderboard.</li>
+      <li><b>Combos</b>Chain landings without ever dropping and your score grows with every step.</li>
+      <li><b>A wardrobe</b>Gems open chests holding ball colours, rims, trail auras and backdrops.</li>
+      <li><b>Your climb follows your account</b>Progress is kept with your Google account, so it comes back on a new phone.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="https://play.google.com/store/apps/details?id=com.hisbo.ascent">Google Play</a>
+    <span class="sep">·</span>
+    <a href="https://anizianizi1004.blogspot.com/p/privacy-policy.html">Privacy Policy</a>
+    <span class="sep">·</span>
+    <a href="mailto:anizianizi1004@gmail.com">anizianizi1004@gmail.com</a>
+    <p>© 2026 aNiZi</p>
+  </div>
+</footer>
+
+</body>
+</html>
